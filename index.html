@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Co. — Brittani</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231A1916'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='15' font-weight='300' fill='%23F8F7F4' text-anchor='middle' letter-spacing='1'%3EBG%3C/text%3E%3C/svg%3E">
+    <meta name="description" content="You have the vision. I build the background. Operations, infrastructure & people systems consulting — Detroit, MI.">
+    <meta property="og:title" content="Background Co. — Brittani">
+    <meta property="og:description" content="You have the vision. I build the background. Operations, infrastructure & people systems for service-based founders.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://backgroundco.co">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Background Co. — Brittani">
+    <meta name="twitter:description" content="You have the vision. I build the background.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #F8F7F4;
+            --ink: #1A1916;
+            --ink-mid: #5A5750;
+            --ink-light: #9A9790;
+            --rule: #D8D5CE;
+            --accent: #B89A72;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { background: #EDECEA; min-height: 100%; }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 48px 20px;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 860px;
+            background: var(--bg);
+            box-shadow: 0 8px 60px rgba(0,0,0,0.10);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page::before {
+            content: 'BG';
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 320px;
+            font-weight: 300;
+            color: rgba(26,25,22,0.025);
+            position: absolute;
+            right: -24px;
+            top: -40px;
+            letter-spacing: -0.02em;
+            pointer-events: none;
+            line-height: 1;
+            z-index: 0;
+            user-select: none;
+        }
+
+        .inner {
+            padding: 60px 80px 52px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ─── SECTION DIVIDER ─── */
+        .section { padding: 36px 0; border-bottom: 1px solid var(--rule); }
+        .section:last-of-type { border-bottom: none; }
+
+        .section-label {
+            font-size: 8.5px;
+            font-weight: 600;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            color: var(--ink-light);
+            margin-bottom: 22px;
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1.7fr;
+            gap: 52px;
+            align-items: center;
+            padding-bottom: 36px;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .hero-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-brand-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 38px;
+            font-weight: 300;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--ink);
+            line-height: 1;
+        }
+
+        .hero-brand-sub {
+            font-size: 8.5px;
+            font-weight: 500;
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+            color: var(--ink-light);
+        }
+
+        .hero-rule {
+            width: 40px;
+            height: 1px;
+            background: var(--rule);
+            margin: 4px 0;
+        }
+
+        .hero-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 21px;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--ink);
+            line-height: 1.5;
+        }
+
+        .hero-desc {
+            font-size: 12px;
+            font-weight: 300;
+            color: var(--ink-mid);
+            line-height: 1.85;
+            max-width: 480px;
+        }
+
+        .hero-desc strong { font-weight: 500; color: var(--ink); }
+
+        /* ─── SERVICES ─── */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 32px;
+        }
+
+        .service-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 17px;
+            font-weight: 500;
+            color: var(--ink);
+            line-height: 1.3;
+            margin-bottom: 5px;
+        }
+
+        .service-rate {
+            font-size: 9.5px;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .service-desc {
+            font-size: 11.5px;
+            font-weight: 300;
+            color: var(--ink-mid);
+            line-height: 1.78;
+        }
+
+        /* ─── WORK ─── */
+        .work-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .case-title {
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ink);
+            margin-bottom: 6px;
+        }
+
+        .case-body {
+            font-size: 11.5px;
+            font-weight: 300;
+            color: var(--ink-mid);
+            line-height: 1.8;
+        }
+
+        /* ─── WHO ─── */
+        .who-body {
+            font-size: 12px;
+            font-weight: 300;
+            color: var(--ink-mid);
+            line-height: 1.88;
+            max-width: 600px;
+        }
+
+        /* ─── CONNECT ─── */
+        .connect-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.8fr;
+            gap: 52px;
+            align-items: start;
+        }
+
+        .connect-intro {
+            font-size: 12px;
+            font-weight: 300;
+            color: var(--ink-mid);
+            line-height: 1.85;
+        }
+
+        .availability {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        /* ─── FORM ─── */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px 28px;
+        }
+
+        .form-field { display: flex; flex-direction: column; gap: 5px; }
+
+        .form-field label {
+            font-size: 7.5px;
+            font-weight: 600;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: var(--ink-light);
+        }
+
+        .form-field input,
+        .form-field select {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--rule);
+            padding: 6px 0;
+            font-family: 'Jost', sans-serif;
+            font-size: 12px;
+            font-weight: 300;
+            color: var(--ink);
+            outline: none;
+            width: 100%;
+            -webkit-appearance: none;
+            appearance: none;
+            border-radius: 0;
+            transition: border-color 0.2s;
+        }
+
+        .form-field input::placeholder { color: var(--ink-light); }
+        .form-field input:focus,
+        .form-field select:focus { border-bottom-color: var(--ink); }
+
+        .form-field select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%239A9790' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 2px center;
+            padding-right: 18px;
+            cursor: pointer;
+        }
+
+        .form-bottom {
+            margin-top: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .linkedin-soft {
+            font-size: 11px;
+            font-weight: 300;
+            color: var(--ink-light);
+        }
+
+        .linkedin-soft a {
+            color: var(--ink-mid);
+            text-decoration: none;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .form-status {
+            font-size: 10px;
+            font-weight: 300;
+            color: var(--ink-light);
+            display: none;
+        }
+
+        .submit-btn {
+            background: var(--ink);
+            color: var(--bg);
+            border: none;
+            padding: 11px 28px;
+            font-family: 'Jost', sans-serif;
+            font-size: 9px;
+            font-weight: 500;
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.2s, opacity 0.2s;
+            white-space: nowrap;
+        }
+
+        .submit-btn:hover { background: var(--ink-mid); }
+        .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        .success-msg { display: none; padding: 8px 0; }
+
+        .success-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--ink);
+            margin-bottom: 8px;
+        }
+
+        .success-body {
+            font-size: 12px;
+            font-weight: 300;
+            color: var(--ink-mid);
+            line-height: 1.85;
+        }
+
+        /* ─── FOOTER ─── */
+        .footer {
+            padding-top: 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .footer-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            color: var(--ink);
+            margin-bottom: 3px;
+        }
+
+        .footer-title {
+            font-size: 8px;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--ink-light);
+        }
+
+        .contact-items { display: flex; gap: 28px; align-items: flex-end; }
+
+        .contact-item { text-align: right; }
+
+        .contact-label {
+            display: block;
+            font-size: 7.5px;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--ink-light);
+            margin-bottom: 3px;
+        }
+
+        .contact-value {
+            font-size: 11px;
+            font-weight: 300;
+            color: var(--ink-mid);
+            letter-spacing: 0.04em;
+            text-decoration: none;
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 780px) {
+            body { padding: 0; }
+            .page { box-shadow: none; }
+            .inner { padding: 36px 24px 32px; }
+            .page::before { font-size: 140px; right: -8px; top: -16px; }
+            .hero { grid-template-columns: 1fr; gap: 16px; }
+            .hero-brand-name { font-size: 28px; }
+            .services-grid { grid-template-columns: 1fr; gap: 28px; }
+            .work-grid { grid-template-columns: 1fr; gap: 24px; }
+            .connect-grid { grid-template-columns: 1fr; gap: 24px; }
+            .form-grid { grid-template-columns: 1fr; gap: 16px; }
+            .form-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
+            .footer { flex-direction: column; gap: 20px; align-items: flex-start; }
+            .contact-items { gap: 20px; flex-wrap: wrap; }
+            .contact-item { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+<div class="inner">
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-left">
+            <div class="hero-brand-name">Background Co.</div>
+            <div class="hero-brand-sub">Operations &middot; Infrastructure &middot; People Systems &middot; Detroit, MI</div>
+            <div class="hero-rule"></div>
+            <div class="hero-tagline">You have the vision.<br>I build the background.</div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-desc">I build operational infrastructure from the ground up, drawing on a career in <strong>People Analytics and HR operations</strong> to design systems that are data-backed and built around how people actually work.</div>
+        </div>
+    </div>
+        <!-- SERVICES -->
+    <div class="section">
+        <div class="section-label">Services</div>
+        <div class="services-grid">
+
+            <div>
+                <div class="service-name">Launch Build</div>
+                <div class="service-rate">Starting at $7,500 &nbsp;&middot;&nbsp; Flat Fee</div>
+                <div class="service-desc">Full operational infrastructure for a new business in 4&ndash;6 weeks. Tech stack, payment systems, intake forms, automations, and program documents &mdash; everything needed to open your doors.</div>
+            </div>
+
+            <div>
+                <div class="service-name">Operations Audit + Rebuild</div>
+                <div class="service-rate">Starting at $2,500 &nbsp;&middot;&nbsp; Flat Fee</div>
+                <div class="service-desc">For founders already running but operating without systems. I assess what is broken, rebuild what needs it, and document everything so your business runs without you holding it together.</div>
+            </div>
+
+            <div>
+                <div class="service-name">Fractional Ops Director</div>
+                <div class="service-rate">Starting at $1,500 &nbsp;&middot;&nbsp; Monthly</div>
+                <div class="service-desc">Ongoing operational support on retainer. Systems maintenance, new program builds, HR process design, and strategic coordination. 10&ndash;15 hours per month.</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- WHO I WORK WITH -->
+    <div class="section">
+        <div class="section-label">Who I Work With</div>
+        <div class="who-body">
+            Service-based founders, solopreneurs, and small teams in wellness, fitness, consulting, and community-centered industries &mdash; particularly Black women-owned businesses and mission-driven organizations building operational infrastructure for the first time. You have the expertise and the clients. You just need someone to build what makes it all run.
+        </div>
+    </div>
+
+    <!-- RECENT WORK -->
+    <div class="section">
+        <div class="section-label">Recent Work</div>
+        <div class="work-grid">
+            <div>
+                <div class="case-title">The Sisters' Couch Wellness Hub &mdash; Detroit, MI</div>
+                <div class="case-body">Took a Detroit wellness founder from concept to Soft Opening in under 90 days &mdash; building the complete operational background for a 6-program hub including tech stack, program agreements, intake forms, payment automations, and a 15-week launch timeline.</div>
+            </div>
+            <div>
+                <div class="case-title">Fitness Brand Build &mdash; Royal Oak, MI</div>
+                <div class="case-body">Enabled a solo fitness entrepreneur to go from idea to operational business in a single engagement &mdash; web presence, payment systems, automations, liability documentation, and a complete booking workflow built and ready to run.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONNECT -->
+    <div class="section">
+        <div class="section-label">Start a Conversation</div>
+        <div class="connect-grid">
+
+            <div>
+                <div class="connect-intro">
+                    Fill out the form and I'll be in touch within 48 hours to learn more about your business and where you need support.
+                    <br><br>
+                    <span class="availability">Currently accepting clients for Q4 2026</span>
+                </div>
+            </div>
+
+            <div>
+                <form id="inquiryForm" novalidate>
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="business">Business Name</label>
+                            <input type="text" id="business" name="business" placeholder="Your business">
+                        </div>
+                        <div class="form-field">
+                            <label for="service">I'm Interested In</label>
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>Select a service</option>
+                                <option>Launch Build</option>
+                                <option>Operations Audit + Rebuild</option>
+                                <option>Fractional Ops Director</option>
+                                <option>Not sure yet</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                        <span class="linkedin-soft">Not ready yet? <a href="https://www.linkedin.com/in/brittaniwhitney/" target="_blank">Connect on LinkedIn</a></span>
+                        <button type="submit" class="submit-btn" id="submitBtn">Send Inquiry</button>
+                    </div>
+                    <span class="form-status" id="formStatus"></span>
+                </form>
+
+                <div class="success-msg" id="successMsg">
+                    <div class="success-title">Thank you.</div>
+                    <div class="success-body">I'll be in touch within 48 hours to learn more about your business and explore how I can help. In the meantime, feel free to <a href="https://www.linkedin.com/in/brittaniwhitney/" target="_blank" style="color:var(--ink-mid);">connect on LinkedIn</a>.</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div>
+            <div class="footer-name">Brittani</div>
+            <div class="footer-title">Founder, Background Co.</div>
+        </div>
+        <div class="contact-items">
+            <div class="contact-item">
+                <span class="contact-label">Email</span>
+                <a href="mailto:brittani@backgroundco.co" class="contact-value">brittani@backgroundco.co</a>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/brittaniwhitney/" target="_blank" class="contact-value">linkedin.com/in/brittaniwhitney</a>
+            </div>
+        </div>
+    </footer>
+
+</div>
+</div>
+
+<script>
+    const SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL';
+
+    document.getElementById('inquiryForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const form       = document.getElementById('inquiryForm');
+        const submitBtn  = document.getElementById('submitBtn');
+        const status     = document.getElementById('formStatus');
+        const successMsg = document.getElementById('successMsg');
+
+        const name    = document.getElementById('name').value.trim();
+        const email   = document.getElementById('email').value.trim();
+        const service = document.getElementById('service').value;
+
+        if (!name || !email || !service) {
+            status.textContent   = 'Please fill in all required fields.';
+            status.style.display = 'block';
+            return;
+        }
+
+        submitBtn.textContent  = 'Sending...';
+        submitBtn.disabled     = true;
+        status.style.display   = 'none';
+
+        const formData = new URLSearchParams({
+            name:     name,
+            business: document.getElementById('business').value.trim(),
+            service:  service,
+            email:    email
+        });
+
+        try {
+            await fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: formData });
+            form.style.display       = 'none';
+            successMsg.style.display = 'block';
+        } catch (err) {
+            submitBtn.textContent  = 'Send Inquiry';
+            submitBtn.disabled     = false;
+            status.textContent     = 'Something went wrong. Please email me directly.';
+            status.style.display   = 'block';
+        }
+    });
+</script>
+
+</body>
+</html>
